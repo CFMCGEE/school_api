@@ -23,7 +23,7 @@ public class Subject {
     private Set<Student> enrolledStudents = new HashSet<>();
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "teacher_id", referencedColumnName = "id")
+    @JoinColumn(name = "TEACHER_ID", referencedColumnName = "id")
     private Teacher teacher;
 
     private String name;
