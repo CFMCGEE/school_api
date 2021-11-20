@@ -13,12 +13,12 @@ public class TeacherController {
     TeacherRepository teacherRepository;
 
     @GetMapping
-    List<Teacher> getTeachers() {
+    public List<Teacher> getTeachers() {
         return teacherRepository.findAll();
     }
 
     @PostMapping
-    Teacher createTeacher(@RequestBody Teacher teacher) {
+    public Teacher createTeacher(@RequestBody Teacher teacher) {
         return teacherRepository.save(teacher);
     }
 

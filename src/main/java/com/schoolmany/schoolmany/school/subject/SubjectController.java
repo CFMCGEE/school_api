@@ -27,11 +27,13 @@ public class SubjectController {
          return subjectRepository.findAll();
      }
 
-     @PostMapping Subject createSubject(@RequestBody Subject subject) {
+     @PostMapping
+     public Subject createSubject(@RequestBody Subject subject) {
          return subjectRepository.save(subject);
      }
 
-     @PutMapping("/{subjectId}/students/{studentId}") Subject enrollStudentToSubject(@PathVariable Long subjectId, @PathVariable Long studentId) {
+     @PutMapping("/{subjectId}/students/{studentId}")
+     public Subject enrollStudentToSubject(@PathVariable Long subjectId, @PathVariable Long studentId) {
 
          Subject subject = subjectRepository.findById(subjectId).get();
          Student student = studentRepository.findById(studentId).get();
@@ -41,7 +43,8 @@ public class SubjectController {
 
      }
 
-    @PutMapping("/{subjectId}/teacher/{teacherId}") Subject assignTeacherToSubject(@PathVariable Long subjectId, @PathVariable Long teacherId) {
+    @PutMapping("/{subjectId}/teacher/{teacherId}")
+    public Subject assignTeacherToSubject(@PathVariable Long subjectId, @PathVariable Long teacherId) {
 
         Subject subject = subjectRepository.findById(subjectId).get();
         Teacher teacher = teacherRepository.findById(teacherId).get();
