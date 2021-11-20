@@ -10,16 +10,17 @@ import java.util.List;
 public class TeacherController {
 
     @Autowired
-    TeacherRepository teacherRepository;
+    TeacherService teacherService;
 
     @GetMapping
     public List<Teacher> getTeachers() {
-        return teacherRepository.findAll();
+        return teacherService.getTeachers();
     }
 
     @PostMapping
     public Teacher createTeacher(@RequestBody Teacher teacher) {
-        return teacherRepository.save(teacher);
+        return teacherService.createTeacher(teacher);
     }
+
 
 }

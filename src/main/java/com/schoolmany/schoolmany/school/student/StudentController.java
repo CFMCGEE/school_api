@@ -10,16 +10,16 @@ import java.util.List;
 public class StudentController {
 
      @Autowired
-     StudentRepository studentRepository;
+     StudentService studentService;
 
      @GetMapping
      public List<Student> getStudents() {
-         return studentRepository.findAll();
+         return studentService.getStudents();
      }
 
      @PostMapping
      public Student createStudent(@RequestBody Student student) {
-         return studentRepository.save(student);
+         return studentService.createStudent(student);
      }
 
 }
