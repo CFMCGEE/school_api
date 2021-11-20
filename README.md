@@ -1,0 +1,6 @@
+    //Subject is going to have many students
+    @ManyToMany...
+    
+    //A student is going to have many subjects
+    @JsonIgnore
+    @ManyToMany(mappedBy = "enrolledStudents")...
