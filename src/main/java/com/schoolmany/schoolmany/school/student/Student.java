@@ -20,7 +20,6 @@ public class Student {
 
     private String name;
 
-
     public Long getId() {
         return id;
     }
@@ -36,6 +35,5 @@ public class Student {
     public Set<Subject> getSubjects() {
         return subjects;
     }
-
 
 }
