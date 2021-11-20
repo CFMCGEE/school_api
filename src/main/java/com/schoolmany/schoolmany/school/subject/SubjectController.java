@@ -18,12 +18,6 @@ public class SubjectController {
      @Autowired
      SubjectService subjectService;
 
-     @Autowired
-     StudentService studentService;
-
-     @Autowired
-     TeacherService teacherService;
-
      @GetMapping
      List<Subject> getSubjects() {
          return subjectService.getSubjects();
